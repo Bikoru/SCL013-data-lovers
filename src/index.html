@@ -26,107 +26,113 @@
     </nav>
   </header>
 
-  <section id="pag-inicio">
+  <main>
+    <section id="pag-home">
       <div id="intro-text">
         <h1>Bienvenido Entrenador Pokemon</h1>
-        <p>Te damos una calurosa bienvenida a nuestra web, donde podrás conocer lo esencial para iniciar tu camino a ser
-          el mejor maestro en Pokemon Go. Te contamos que encontrarás información de los primeros 151 pokemon de la región 
+        <p id="welcome-text">Te damos una calurosa bienvenida a nuestra web, donde podrás conocer lo esencial para iniciar tu camino a ser
+          el mejor maestro en Pokemon Go. Te contamos que encontrarás información de los primeros 151 pokemon de la
+          región
           Kanto pero a medida que podamos iremos actualizando estos datos.
-          <br> 
-          Te invitamos a navegar en las siguientes secciones, para brindarte toda 
+          <br>
+          Te invitamos a navegar en las siguientes secciones, para brindarte toda
           la informacion que necesitas para comenzar: </p>
       </div>
       <div id="img-container">
-        <div class="intro-img">
-          <img src="./Images/Pokedex.png" alt="pokedex">
+        <div>
+          <img src="./Images/Pokedex.png" alt="pokedex" class="intro-img">
         </div>
-        <div class="intro-img">
-          <img src="./Images/Ranking.png" alt="ranking">
+        <div>
+          <img src="./Images/Ranking.png" alt="ranking" class="intro-img">
         </div>
-        <div class="intro-img">
-          <img src="./Images/Tips.png" alt="tips">
+        <div>
+          <img src="./Images/Tips.png" alt="tips" class="intro-img">
         </div>
       </div>
-  </section> 
+    </section>
 
-  <section id="pag-pokedex">
-    <div id="select-filters">
-      <select name="" id="select-pokedex">
-        <option value="type">Tipo</option>
-        <option value="steel">Acero</option>
-        <option value="water">Agua</option>
-        <option value="bug">Bicho</option>
-        <option value="dragon">Dragón</option>
-        <option value="electric">Eléctrico</option>
-        <option value="ghost">Fantasma</option>
-        <option value="fire">Fuego</option>
-        <option value="fairy">Hada</option>
-        <option value="ice">Hielo</option>
-        <option value="fighting">Lucha</option>
-        <option value="normal">Normal</option>
-        <option value="grass">Planta</option>
-        <option value="psychic">Psíquico</option>
-        <option value="rock">Roca</option>
-        <option value="dark">Siniestro</option>
-        <option value="ground">Tierra</option>
-        <option value="poison">Veneno</option>
-        <option value="flying">Volador</option>
-      </select>
-      
-      <select name="" id="select-alphabetic">
-        <option value="order">Orden</option>
-        <option value="a-z">A-Z</option>
-        <option value="z-a">Z-A</option>
-      </select>
-      
-      <select name="" id="select-eggs">
-        <option value="egg">Huevos</option>
-        <option value="2k">2 Km</option>
-        <option value="5k">5 Km</option>
-        <option value="10k">10 Km</option>
-      </select>
-    </div>
+    <section id="pag-pokedex">
+      <div id="select-filters">
+        <select name="" id="select-pokedex">
+          <option value="type">Tipo</option>
+          <option value="steel">Acero</option>
+          <option value="water">Agua</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ghost">Fantasma</option>
+          <option value="fire">Fuego</option>
+          <option value="fairy">Hada</option>
+          <option value="ice">Hielo</option>
+          <option value="fighting">Lucha</option>
+          <option value="normal">Normal</option>
+          <option value="grass">Planta</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="dark">Siniestro</option>
+          <option value="ground">Tierra</option>
+          <option value="poison">Veneno</option>
+          <option value="flying">Volador</option>
+        </select>
 
-    <div id="pokemon-list"> <!--generador de la tarjeta donde se muestra el pokemon->
+        <select name="" id="select-alphabetic">
+          <option value="order">Orden</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+
+        <select name="" id="select-eggs">
+          <option value="egg">Huevos</option>
+          <option value="2k">2 Km</option>
+          <option value="5k">5 Km</option>
+          <option value="10k">10 Km</option>
+        </select>
+      </div>
+
+      <div id="pokemon-list">
+        <!--generador de la tarjeta donde se muestra el pokemon->
     </div>
   </section>
 
   <section id="pag-detalle">
       <!--historia 2-->
-  </section>
+    </section>
 
-  <section id="pag-ranking">
-    <table> <!--con html dinámico-->
-      <tr>
-        <th>Posición</th>
-        <th>N° Pokedex</th>
-        <th>Nombre</th>
-        <th>Frecuencia de aparición</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>002</td>
-        <td>Ivisaur</td>
-        <td>4.2%</td>
-      </tr>
-    </table>
-  </section>
+    <section id="pag-ranking">
+      <table>
+        <!--con html dinámico-->
+        <tr>
+          <th>Posición</th>
+          <th>N° Pokedex</th>
+          <th>Nombre</th>
+          <th>Frecuencia de aparición</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>002</td>
+          <td>Ivisaur</td>
+          <td>4.2%</td>
+        </tr>
+      </table>
+    </section>
 
-  <section id="pag-tips">
-    <h1>Tips durante la contingencia</h1>
-    <h3>¡Truco para abrir huevos desde casa muy rápido!</h3>
-    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/wtavSOaOhhs" frameborder="0" 
+    <section id="pag-tips">
+      <h1>Tips durante la contingencia</h1>
+      <h3>¡Truco para abrir huevos desde casa muy rápido!</h3>
+      <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/wtavSOaOhhs" frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-    <h4></h4>
-  </section>
+      <h4></h4>
+    </section>
 
-  <section id="">
+    <section id="">
 
-  </section>
+    </section>
 
- 
-  
-  <div id="root"></div> <!--//contenedor raíz que traerá toda la información desde JS-->
+
+
+    <div id="root"></div>
+    <!--//contenedor raíz que traerá toda la información desde JS-->
+  </main>
   <footer>
     <p>Realizado con cariño por Constanza y Victoria &hearts;</p>
   </footer>

@@ -1,16 +1,24 @@
 import  pokeData  from './data/pokemon/pokemon.js';
 
-/*const selectPokedex = document.getElementById('select-pokedex');
-selectPokedex.options[selectPokedex.selectedIndex].text;*/
-
 function createCard(pokemon) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("poke-card");
 
+    const pokeNumber = document.createElement("p");
+    pokeNumber.innerText = pokemon.num;
+    cardDiv.appendChild(pokeNumber);
+
+    const pokeName = document.createElement("p");
+    pokeName.innerText = pokemon.name;
+    cardDiv.appendChild(pokeName);
+
     const pokemonImg = document.createElement("img");
     pokemonImg.src = pokemon.img;
-
     cardDiv.appendChild(pokemonImg);
+
+    const pokeType = document.createElement("p");
+    pokeType.innerText = pokemon.type;
+    cardDiv.appendChild(pokeType);
     
     const pokemonList = document.getElementById("pokemon-list");
     pokemonList.appendChild(cardDiv);
@@ -19,6 +27,9 @@ function createCard(pokemon) {
 for (const pokemon of pokeData.pokemon) {
     createCard(pokemon);
 }
+
+
+
 
 /*document.querySelectorAll('#start-page').forEach(function(button) {
     button.addEventListener("click, ")
@@ -34,12 +45,6 @@ pokedexBtn.querySelectorAll*/
 //select.options[select.selectedIndex].text --> reconoce cuál de los select fue seleccionado y devuelve ese valor
 
 
-
-
-console.log(pokeData.pokemon[0].num);
-console.log(pokeData.pokemon[0].name);
-console.log(pokeData.pokemon[0].type);
-console.log(pokeData.pokemon[0].img);
 
 
 
