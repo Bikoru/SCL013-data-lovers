@@ -1,16 +1,136 @@
-# Data Lovers
+# Pokeweb
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Parte adicional-opcional](#6-parte-adicional-opcional)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+*  [1. Introducción](##-Introducción)
+
+*  [2. Historias de Usuario](##-Historias-de-usuarios)
+
+*  [3. Preámbulo](#1-preámbulo)
+
+*  [3. Resumen del proyecto](#2-resumen-del-proyecto)
+
+*  [4. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+
+*  [5. Consideraciones generales](#4-consideraciones-generales)
+
+*  [6. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+
+*  [7. Parte adicional-opcional](#6-parte-adicional-opcional)
+
+*  [8. Consideraciones técnicas](#7-consideraciones-técnicas)
+
+*  [9. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+
+*  [10. Checklist](#9-checklist)
+  
+
+## Introducción
+
+Pokeweb es una página creada para los jugadores nuevos en el mundo de **Pokémon GO**, donde les ayudará a conocer los primeros 151 pokémon de la región de Kantō, con los datos necesarios para poder empezar y conocer al detalle cada uno, brindandole además algunos tips para iniciar.  
+
+## Historias de usuarios
+
+### Historia 1
+
+Yo como jugador novato quiero ver todos los pokemones y en orden alfabético con su número, nombre, foto y tipo para conocerlos.
+
+**Criterios de aceptación:**
+
+ - El usuario al acceder a la página podrá visualizar a todos los pokemones
+- El usuario podrá ordenar en orden alfabético A-Z / Z-A
+- El usuario podrá ver su foto, su nombre y el tipo del pokémon.
+- La página se podrá visualizar en cualquier dispositivo.
+
+  
+
+### Historia 2
+
+  
+
+Como jugador quiero poder filtrar por Tipo para conocer que pokémon es de tipo "agua", "fuego", entre otro.
+
+  
+
+**Criterios de aceptación:**
+
+  
+
+- El usuario podrá Filtrar por Tipo de pokémon
+- El usuario podrá visualizar por lista los pokemones que cumplan el filtro.
+- Se podrá visualizar en cualquier dispositivo.
+
+  
+
+### Historia 3
+
+Como jugador quiero poder filtrar por Huevo para saber al momento de incubar xKM que pokemones me pueden aparecer.
+
+  
+
+**Criterios de aceptación:**
+
+- El usuario podrá Filtrar por Huevo de aparición.
+- El usuario podrá visualizar por lista los pokemones que cumplan el filtro.
+- Se podrá visualizar en cualquier dispositivo.
+
+  
+
+### Historia 4
+
+Como jugador quiero al clickear una tarjeta de pokémon entrar a ver el detalle del pokémon que me interesa para saber sus características y debilidades.
+
+  
+
+**Criterios de aceptación:**
+
+- El usuario podrá clickear la tarjeta de pokemon e ingresar a una sección nueva
+- El usuario podrá visualizar las características y debilidades del pokemon.
+- La página se podrá visualizar en cualquier dispositivo.
+
+  
+
+### Historia 5
+
+Como jugador quiero poder visualizar las evoluciones de cada pokémon para saber cuántas y cuáles son las evoluciones que tienen antes y después.
+
+  
+
+**Criterios de aceptación:**
+
+- El usuario podrá visualizar cuales son las evoluciones del pokémon antes y después.
+- El usuario podrá visualizar cada evolución con su número. nombre, imagen y tipo.
+- Se podrá visualizar en cualquier dispositivo.
+
+  
+
+### Historia 6
+
+Como jugador quiero saber cuántos caramelos necesita un pokémon para evolucionar.
+
+ 
+**Criterios de aceptación:**
+
+- El usuario podrá visualizar en sus características cuantos caramelos necesita para evolucionar.
+- Se podrá visualizar en cualquier dispositivo.
+
+#### Historia 7
+
+Como jugador quiero saber el top 10 de frecuencia de aparición de los Pokémon para prepararme antes de salir.
+ 
+**Criterios de aceptación:**
+
+- El usuario podrá visualizar una tabla de posición con los que tienen mayor frecuencia de aparición.
+- La página se podrá visualizar en cualquier dispositivo.
+
+#### Historia 8
+
+Como jugador nuevo quiero conocer algunos tips para que ayuden a subir de nivel, como evolucionar, entre otros.
+
+**Criterios de aceptación:**
+
+- El usuario podrá visualizar un listado de tips con Titulo, descripción y/o vídeo explicativo.
+- La página se podrá visualizar en cualquier dispositivo.
 
 ***
 
