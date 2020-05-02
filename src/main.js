@@ -1,6 +1,24 @@
 import  pokeData  from './data/pokemon/pokemon.js';
 
-function createCard(pokemon) {
+//Con esta función escondemos todas las secciones en general, menos la página de inicio
+function hideAllSections() {
+    document.getElementById('pag-pokedex').style.display = 'none';
+    document.getElementById('pag-ranking').style.display = 'none';
+    document.getElementById('pag-tips').style.display = 'none';
+}
+//Con esta función muestro las secciones que quiero
+function showSection(section) {
+    hideAllSections(); //llamo a las secciones escondidas más arriba
+    document.getElementById(section).style.display = 'block'; //y le ordenamos que independiente del link, nos muestre una sección determinada
+}
+// llamamos al id de los <a>, y al evento click, le damos una función anónima para que muestre las secciones deseadas en los parámetros
+function setupListeners() {
+    document.getElementById('pokedex-link').addEventListener('click', () => { showSection('pag-pokedex'); });
+    document.getElementById('ranking-link').addEventListener('click', () => { showSection('pag-ranking'); });
+    document.getElementById('tips-link').addEventListener('click', () => { showSection('pag-tips'); });
+}
+
+function createCardForPokemon(pokemon) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("poke-card");
 
@@ -24,27 +42,13 @@ function createCard(pokemon) {
     pokemonList.appendChild(cardDiv);
 }
 
-for (const pokemon of pokeData.pokemon) {
-    createCard(pokemon);
+function createAllPokemonCards(pokemons) {
+    for (const pokemon of pokemons) {
+        createCardForPokemon(pokemon);
+    }
 }
 
+setupListeners();
 
-
-
-/*document.querySelectorAll('#start-page').forEach(function(button) {
-    button.addEventListener("click, ")
-    )}*/
-
-//botón que da 
-
-/*const pokedexBtn = getElementById("start-page");
-pokedexBtn.querySelectorAll*/
-// eslint-disable-next-line no-unused-vars
-
-
-//select.options[select.selectedIndex].text --> reconoce cuál de los select fue seleccionado y devuelve ese valor
-
-
-
-
+createAllPokemonCards(pokeData.pokemon);
 
