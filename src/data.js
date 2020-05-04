@@ -9,4 +9,6 @@ export const sortedPokemons = (data, sortBy, condition) => {
   }
 }
 
-
+export const filterPokemons = (data, filterBy, type) => {
+  return data.filter((pokemon) => pokemon[filterBy].includes(type));
+}
