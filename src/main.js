@@ -1,4 +1,5 @@
 import  pokeData  from './data/pokemon/pokemon.js';
+import { sortedPokemons, filterPokemons } from './data.js';
 
 //Con esta función escondemos todas las secciones en general, menos la página de inicio
 function hideAllSections() {
@@ -12,10 +13,52 @@ function showSection(section) {
     document.getElementById(section).style.display = 'block'; //y le ordenamos que independiente del link, nos muestre una sección determinada
 }
 // llamamos al id de los <a>, y al evento click, le damos una función anónima para que muestre las secciones deseadas en los parámetros
-function setupListeners() {
-    document.getElementById('pokedex-link').addEventListener('click', () => { showSection('pag-pokedex'); });
-    document.getElementById('ranking-link').addEventListener('click', () => { showSection('pag-ranking'); });
-    document.getElementById('tips-link').addEventListener('click', () => { showSection('pag-tips'); });
+
+function relatedElements(elementsId) {
+    const elements = [];
+
+    elementsId.forEach(element => {
+        elements.push( document.getElementById(element) );
+    });
+
+    return elements;
+}
+function setupNavigationListeners() {
+    relatedElements(["pokedex-link", "nav-pokedex-link"]).forEach(element => { 
+        element.addEventListener('click', () => { showSection('pag-pokedex'); });    
+    });
+    relatedElements(["ranking-link", "nav-ranking-link"]).forEach(element => {
+        element.addEventListener('click', () => { showSection('pag-ranking'); });
+    });
+    relatedElements(["tips-link", "nav-tips-link"]).forEach(element => {
+        element.addEventListener('click', () => { showSection('pag-tips');  });
+    });
+}
+
+function setupSelectionsListeners() {
+    document.getElementById('select-alphabetic').addEventListener('change', (event) => {
+        const orderBy = event.target.value;
+
+        if (orderBy === 'order') {
+            return;
+        }
+
+        const pokemons = sortedPokemons(pokeData.pokemon, 'name', event.target.value);
+
+        createAllPokemonCards(pokemons);
+    });
+
+    document.getElementById('select-pokedex').addEventListener('change', (event) => {
+        const type = event.target.value;
+    
+        if (type === 'type') {
+            return;
+        }
+
+        const pokemons = filterPokemons(pokeData.pokemon, 'type', type);
+
+        createAllPokemonCards(pokemons);
+    });
 }
 
 function createCardForPokemon(pokemon) {
@@ -38,17 +81,20 @@ function createCardForPokemon(pokemon) {
     pokeType.innerText = pokemon.type;
     cardDiv.appendChild(pokeType);
     
-    const pokemonList = document.getElementById("pokemon-list");
-    pokemonList.appendChild(cardDiv);
+    return cardDiv;
 }
 
 function createAllPokemonCards(pokemons) {
+    const pokemonList = document.getElementById("pokemon-list");
+   //Se le hace un clear a la lista de pokemones originales para que no se sumen los filtros
+    pokemonList.innerHTML = '';
+
     for (const pokemon of pokemons) {
-        createCardForPokemon(pokemon);
+        const cardDiv = createCardForPokemon(pokemon);
+        pokemonList.appendChild(cardDiv);
     }
 }
 
-setupListeners();
-
+setupNavigationListeners();
+setupSelectionsListeners();
 createAllPokemonCards(pokeData.pokemon);
-
