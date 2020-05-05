@@ -24,8 +24,8 @@ function relatedElements(elementsId) {
     return elements;
 }
 function setupNavigationListeners() {
-    relatedElements(["pokedex-link", "nav-pokedex-link"]).forEach(element => { 
-        element.addEventListener('click', () => { showSection('pag-pokedex'); });    
+    relatedElements(["pokedex-link", "nav-pokedex-link"]).forEach(element => {
+        element.addEventListener('click', () => { showSection('pag-pokedex'); });
     });
     relatedElements(["ranking-link", "nav-ranking-link"]).forEach(element => {
         element.addEventListener('click', () => { showSection('pag-ranking'); });
@@ -50,7 +50,7 @@ function setupSelectionsListeners() {
 
     document.getElementById('select-pokedex').addEventListener('change', (event) => {
         const type = event.target.value;
-    
+
         if (type === 'type') {
             return;
         }
@@ -80,7 +80,7 @@ function createCardForPokemon(pokemon) {
     const pokeType = document.createElement("p");
     pokeType.innerText = pokemon.type;
     cardDiv.appendChild(pokeType);
-    
+
     return cardDiv;
 }
 
