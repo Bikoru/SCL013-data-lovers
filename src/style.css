@@ -5,10 +5,9 @@
   font-family: 'Roboto', sans-serif;
 }
 /*Header */
-
 header {
-width: 100%;
-height: 250px;
+    width: 100%;
+    height: 100px;
 }
 
 nav {
@@ -75,6 +74,12 @@ nav {
     align-items: flex-start;
     
 }
+    /*Hide sections*/
+#pag-pokedex, #pag-ranking, #pag-tips {
+display: none;
+
+    }    
+
  
 /*averiguar otras medidas*/
 .intro-img {
