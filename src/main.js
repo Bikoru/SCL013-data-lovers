@@ -6,6 +6,7 @@ function hideAllSections() {
     document.getElementById('pag-pokedex').style.display = 'none';
     document.getElementById('pag-ranking').style.display = 'none';
     document.getElementById('pag-tips').style.display = 'none';
+    document.getElementById('pag-home').style.display = 'none';
 }
 //Con esta función muestro las secciones que quiero
 function showSection(section) {
@@ -59,6 +60,7 @@ function setupSelectionsListeners() {
 
         createAllPokemonCards(pokemons);
     });
+
 }
 
 function createCardForPokemon(pokemon) {

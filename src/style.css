@@ -20,9 +20,6 @@
   display: block;
 }
 
-
-}
-
 /* Header*/
 
 
@@ -100,12 +97,21 @@ flex-wrap: wrap;
   color: #9C9A9A;
   text-align: center;
 }
+    /*Hide sections*/
+#pag-pokedex, #pag-ranking, #pag-tips {
+display: none;
+
+    }
+
+/*averiguar otras medidas*/
+.intro-img {
+    width: 224px;
+}
 
 :placeholder-shown {
   color: #9C9A9A;
   text-align: center;
 }
-
 
 
   /* Main- seccion home */
