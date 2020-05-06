@@ -1,33 +1,31 @@
-*{ /*formatea todo el body*/
-    margin: 0 auto;
-    padding: 0;
-    scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
-  }
+* {
+  /*formatea todo el body*/
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
 
-   /*Hamburguesa para responsive*/
-.menu-toggle{
-    display: none;
-    font-size: 50px;
-    color: #1D8696;
+/*Hamburguesa para responsive*/
+.menu-toggle {
+  display: none;
+  font-size: 50px;
+  color: #1d8696;
 }
 
 /* Responsive*/
 
-@media (max-width: 700px){
-
-.menu-toggle{
-  display: block;
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* Header*/
-
-
 header {
   width: 100%;
   height: 100px;
-  }
-
+}
 
 .site-nav {
   position: fixed;
@@ -44,152 +42,152 @@ header {
   min-width: 150px;
 }
 
-#logoBtn, #top-nav, #browser {
-display: flex;
-align-items: center;
-align-content: center;
+#logoBtn,
+#top-nav,
+#browser {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
-#logoBtn{
+#logoBtn {
   width: 30%;
   padding-right: 20%;
 }
 
-#top-nav{
-width: 40%;
-flex-wrap: wrap;
+#top-nav {
+  width: 40%;
+  flex-wrap: wrap;
 }
 
-#browser{
+#browser {
   width: 30%;
-
 }
 
-.btn-menu, .intro-text{
+.btn-menu,
+.intro-text {
   font-size: 20px;
   color: black;
   text-decoration: none;
   font-weight: 400;
   border-bottom: 2px solid transparent;
 }
+
 .btn-menu:hover {
   /* Linea que aparece abajo de cada enlace del menu */
-  border-bottom: 2px solid #4BEA52;
+  border-bottom: 2px solid #4bea52;
   transition: 0.6s; /*tiempo en realizar el efecto */
 }
 
-
-#browser>input {
+#browser > input {
   width: 270px;
   height: 30px;
-  color: #9C9A9A ;
-  background: #E5E5E5;
+  color: #9c9a9a;
+  background: #e5e5e5;
   border-radius: 45px;
   text-align: center;
   border-style: hidden;
 }
 
-#btn-holder>img{
+#btn-holder > img {
   width: 30px;
 }
 
 ::placeholder {
-  color: #9C9A9A;
+  color: #9c9a9a;
   text-align: center;
 }
-    /*Hide sections*/
-#pag-pokedex, #pag-ranking, #pag-tips {
-display: none;
-
-    }
+/*Hide sections*/
+#pag-pokedex,
+#pag-ranking,
+#pag-tips {
+  display: none;
+}
 
 /*averiguar otras medidas*/
 .intro-img {
-    width: 224px;
+  width: 224px;
 }
 
 :placeholder-shown {
-  color: #9C9A9A;
+  color: #9c9a9a;
   text-align: center;
 }
 
+/* Main- seccion home */
+#pag-home {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
 
-  /* Main- seccion home */
-  #pag-home {
-      display: flex;
-      width: 100%;
-      height: auto;
-      flex-direction: column;
-     }
+/*averiguar otras medidas*/
+.intro-img {
+  /* iconos pag-home*/
+  width: 224px;
+  padding-bottom: 10%;
+}
 
-  /*averiguar otras medidas*/
-  .intro-img{ /* iconos pag-home*/
-      width: 224px;
-      padding-bottom: 10%;
-  }
-
-
-  .intro-text{/* Texto pag-home*/
+.intro-text {
+  /* Texto pag-home*/
   text-align: center;
-  }
+}
 
-  #intro-text, #img-container {
+#intro-text,
+#img-container {
   display: flex;
   align-items: center;
-  flex-wrap:wrap;
-  }
+  flex-wrap: wrap;
+}
 
-  #intro-text {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-  }
+#intro-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  #img-container{
-      width: 100%;
-      justify-content: space-between;
-  }
+#img-container {
+  width: 100%;
+  justify-content: space-between;
+}
 
-  h1 {
+h1 {
   text-align: center;
-  }
+}
 
-  #welcome-text {
-      text-align: center;
+#welcome-text {
+  text-align: center;
+}
 
-  }
-
-  /*Seccion Pokedex */
+/*Seccion Pokedex */
 #pag-pokedex {
   display: none;
 }
 
+#pokemon-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  #pokemon-list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap:wrap;
+.poke-card {
+  display: inline-block;
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #e5e5e5;
+  margin: 5px;
+  text-align: center;
+}
 
-  }
+/* Footer*/
 
-  .poke-card {
-      display: inline-block;
-      width: 150px;
-      height: 250px;
-      border-radius: 20px;
-      background-color: #E5E5E5;
-      margin: 5px;
-      text-align: center;
-  }
-
-
-  /* Footer*/
-
-  footer{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      height: 40px;
-      background: rgba(75, 234, 82, 0.57);
-  }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  height: 40px;
+  background: rgba(75, 234, 82, 0.57);
+}
