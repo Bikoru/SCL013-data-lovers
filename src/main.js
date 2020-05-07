@@ -44,7 +44,7 @@ function setupSelectionsListeners() {
             return;
         }
 
-        const pokemons = sortedPokemons(pokeData.pokemon, 'name', event.target.value);
+        const pokemons = sortedPokemons(pokeData.pokemon, 'name', orderBy);
 
         createAllPokemonCards(pokemons);
     });
