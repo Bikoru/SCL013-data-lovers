@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <link rel="icon" type="image/ico" href="https://img.icons8.com/color/48/000000/smartphone.png" />
@@ -8,9 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-
 <body>
   <header>
     <nav class="site-nav">
@@ -19,14 +16,11 @@
           <img class="img-logo" src="Images/PokeWeb.png" alt="Logo Pokeweb">
         </a>
       </div>
-
       <div id="top-nav" class="top-nav">
-
         <a href="#pag-pokedex" class="btn-menu" title="Pokedex" id="nav-pokedex-link">Pokedex</a>
         <a href="#pag-ranking" class="btn-menu" id="nav-ranking-link">Ranking</a>
         <a href="#pag-tips" class="btn-menu" id="nav-tips-link">Tips</a>
       </div>
-
       <div id="browser" class="browser">
         <input type="text" placeholder="Ingresa el nombre de tu Pokemon" id="search-text-input">
         <div id="btn-holder">
@@ -39,7 +33,6 @@
       </div>
     </nav>
   </header>
-
   <main>
     <section id="pag-home">
       <div id="intro-text">
@@ -72,10 +65,9 @@
         </div>
       </div>
     </section>
-
     <section id="pag-pokedex">
       <div id="select-filters">
-        <select name="" id="select-pokedex">
+        <select name="" id="select-pokedex" class="dropdown-filters">
           <option value="type">Tipo</option>
           <option value="Water">Agua</option>
           <option value="Bug">Bicho</option>
@@ -93,28 +85,22 @@
           <option value="Poison">Veneno</option>
           <option value="Flying">Volador</option>
         </select>
-
-        <select name="" id="select-alphabetic">
+        <select name="" id="select-alphabetic"  class="dropdown-filters">
           <option value="order">Orden</option>
           <option value="az">A-Z</option>
           <option value="za">Z-A</option>
         </select>
-
-        <select name="" id="select-eggs">
+        <select name="" id="select-eggs"  class="dropdown-filters">
           <option value="eggs">Huevos</option>
           <option value="2 km">2 Km</option>
           <option value="5 km">5 Km</option>
           <option value="10 km">10 Km</option>
         </select>
       </div>
-
       <div id="pokemon-list"></div>  <!--generador de la tarjeta donde se muestra el pokemon-->
     </section>
-
     <section id="pag-detalle"> <!-- historia 2-->
-    
     </section>
-
     <section id="pag-ranking">
       <table>
         <!--con html dinámico-->
@@ -132,7 +118,6 @@
         </tr>
       </table>
     </section>
-
     <section id="pag-tips">
       <h1>Tips durante la contingencia</h1>
       <h3>¡Truco para abrir huevos desde casa muy rápido!</h3>
@@ -140,7 +125,6 @@
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
       <h4></h4>
     </section>
-
     <div id="root"></div>
     <!--//contenedor raíz que traerá toda la información desde JS-->
   </main>
@@ -148,6 +132,5 @@
     <p>Realizado con cariño por Constanza y Victoria &hearts;</p>
   </footer>
   <script src="main.js" type="module"></script>
-</body>
-
+  </body>
 </html>

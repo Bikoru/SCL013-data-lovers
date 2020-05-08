@@ -3,25 +3,27 @@
   margin: 0 auto;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*Hamburguesa para responsive*/
 .menu-toggle {
   display: none;
   font-size: 50px;
-  color: #1d8696;
+  color: #1D8696;
 }
 
 /* Responsive*/
 
 @media (max-width: 700px) {
+
   .menu-toggle {
     display: block;
   }
 }
 
 /* Header*/
+
 header {
   width: 100%;
   height: 100px;
@@ -75,44 +77,37 @@ header {
 
 .btn-menu:hover {
   /* Linea que aparece abajo de cada enlace del menu */
-  border-bottom: 2px solid #4bea52;
-  transition: 0.6s; /*tiempo en realizar el efecto */
+  border-bottom: 2px solid #4BEA52;
+  transition: 0.6s;
+  /*tiempo en realizar el efecto */
 }
 
-#browser > input {
+
+#browser>input {
   width: 270px;
   height: 30px;
-  color: #9c9a9a;
-  background: #e5e5e5;
+  color: #9C9A9A;
+  background: #E5E5E5;
   border-radius: 45px;
   text-align: center;
   border-style: hidden;
 }
 
-#btn-holder > img {
+#btn-holder>img {
   width: 30px;
 }
 
 ::placeholder {
-  color: #9c9a9a;
+  color: #9C9A9A;
   text-align: center;
-}
-/*Hide sections*/
-#pag-pokedex,
-#pag-ranking,
-#pag-tips {
-  display: none;
-}
-
-/*averiguar otras medidas*/
-.intro-img {
-  width: 224px;
 }
 
 :placeholder-shown {
-  color: #9c9a9a;
+  color: #9C9A9A;
   text-align: center;
 }
+
+
 
 /* Main- seccion home */
 #pag-home {
@@ -120,14 +115,17 @@ header {
   width: 100%;
   height: auto;
   flex-direction: column;
+  justify-content: center;
+
 }
 
 /*averiguar otras medidas*/
 .intro-img {
   /* iconos pag-home*/
-  width: 224px;
-  padding-bottom: 10%;
+  width: 220px;
+  padding: 0% 3%;
 }
+
 
 .intro-text {
   /* Texto pag-home*/
@@ -139,17 +137,25 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #intro-text {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5%;
+}
+
+#intro-text>h1,
+.welcome-text {
+  padding: 1% 10%;
 }
 
 #img-container {
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-bottom: 5%;
 }
 
 h1 {
@@ -161,7 +167,9 @@ h1 {
 }
 
 /*Seccion Pokedex */
-#pag-pokedex {
+#pag-pokedex,
+#pag-ranking,
+#pag-tips {
   display: none;
 }
 
@@ -176,7 +184,7 @@ h1 {
   width: 150px;
   height: 250px;
   border-radius: 20px;
-  background-color: #e5e5e5;
+  background-color: #E5E5E5;
   margin: 5px;
   text-align: center;
 }
@@ -190,4 +198,17 @@ footer {
   font-weight: 700;
   height: 40px;
   background: rgba(75, 234, 82, 0.57);
+}
+
+/*contenedor*/
+#select-filters {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  width: 100%;
+  /*max-width: ; */ 
+  min-width: 374px;
+  
 }
