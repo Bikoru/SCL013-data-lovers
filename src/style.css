@@ -1,12 +1,13 @@
-*{ /*formatea todo el body*/
+* {
+  /*formatea todo el body*/
   margin: 0 auto;
   padding: 0;
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
 }
 
- /*Hamburguesa para responsive*/
-.menu-toggle{
+/*Hamburguesa para responsive*/
+.menu-toggle {
   display: none;
   font-size: 50px;
   color: #1D8696;
@@ -14,185 +15,187 @@
 
 /* Responsive*/
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
 
-.menu-toggle{
-display: block;
-}
-
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* Header*/
 
-
 header {
-width: 100%;
-height: 100px;
+  width: 100%;
+  height: 100px;
 }
 
-
 .site-nav {
-position: fixed;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-box-shadow: 0 0 5px rgb(0, 0, 0);
-background-color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  background-color: #ffffff;
 }
 
 .img-logo {
-width: 80%;
-min-width: 150px;
+  width: 80%;
+  min-width: 150px;
 }
 
-#logoBtn, #top-nav, #browser {
-display: flex;
-align-items: center;
-align-content: center;
+#logoBtn,
+#top-nav,
+#browser {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
-#logoBtn{
-width: 30%;
-padding-right: 20%;
+#logoBtn {
+  width: 30%;
+  padding-right: 20%;
 }
 
-#top-nav{
-width: 40%;
-flex-wrap: wrap;
+#top-nav {
+  width: 40%;
+  flex-wrap: wrap;
 }
 
-#browser{
-width: 30%;
+#browser {
+  width: 30%;
 }
 
-.btn-menu, .intro-text{
-font-size: 20px;
-color: black;
-text-decoration: none;
-font-weight: 400;
-border-bottom: 2px solid transparent;
+.btn-menu,
+.intro-text {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
 }
+
 .btn-menu:hover {
-/* Linea que aparece abajo de cada enlace del menu */
-border-bottom: 2px solid #4BEA52;
-transition: 0.6s; /*tiempo en realizar el efecto */
+  /* Linea que aparece abajo de cada enlace del menu */
+  border-bottom: 2px solid #4BEA52;
+  transition: 0.6s;
+  /*tiempo en realizar el efecto */
 }
 
 
 #browser>input {
-width: 270px;
-height: 30px;
-color: #9C9A9A ;
-background: #E5E5E5;
-border-radius: 45px;
-text-align: center;
-border-style: hidden;
+  width: 270px;
+  height: 30px;
+  color: #9C9A9A;
+  background: #E5E5E5;
+  border-radius: 45px;
+  text-align: center;
+  border-style: hidden;
 }
 
-#btn-holder>img{
-width: 30px;
+#btn-holder>img {
+  width: 30px;
 }
 
 ::placeholder {
-color: #9C9A9A;
-text-align: center;
+  color: #9C9A9A;
+  text-align: center;
 }
 
 :placeholder-shown {
-color: #9C9A9A;
-text-align: center;
+  color: #9C9A9A;
+  text-align: center;
 }
 
 
 
 /* Main- seccion home */
 #pag-home {
-    display: flex;
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
 
-   }
+}
 
 /*averiguar otras medidas*/
-.intro-img{ /* iconos pag-home*/
-    width: 220px;
-    padding: 0% 3%;
+.intro-img {
+  /* iconos pag-home*/
+  width: 220px;
+  padding: 0% 3%;
 }
 
 
-.intro-text{/* Texto pag-home*/
-text-align: center;
+.intro-text {
+  /* Texto pag-home*/
+  text-align: center;
 }
 
-#intro-text, #img-container {
-display: flex;
-align-items: center;
-flex-wrap:wrap;
-justify-content: space-between;
+#intro-text,
+#img-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #intro-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5%;
 }
 
-#intro-text>h1,.welcome-text{
+#intro-text>h1,
+.welcome-text {
   padding: 1% 10%;
 }
 
-#img-container{
-    width: 100%;
-    justify-content: space-evenly;
-    padding-bottom: 5%;
+#img-container {
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 5%;
 }
 
 h1 {
-text-align: center;
+  text-align: center;
 }
 
 #welcome-text {
-    text-align: center;
-
+  text-align: center;
 }
 
 /*Seccion Pokedex */
 #pag-pokedex,
 #pag-ranking,
 #pag-tips {
-display: none;
+  display: none;
 }
 
-
 #pokemon-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .poke-card {
-    display: inline-block;
-    width: 150px;
-    height: 250px;
-    border-radius: 20px;
-    background-color: #E5E5E5;
-    margin: 5px;
-    text-align: center;
+  display: inline-block;
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #E5E5E5;
+  margin: 5px;
+  text-align: center;
 }
-
 
 /* Footer*/
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    height: 40px;
-    background: rgba(75, 234, 82, 0.57);
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  height: 40px;
+  background: rgba(75, 234, 82, 0.57);
 }
