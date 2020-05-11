@@ -231,16 +231,20 @@ footer {
   background-color: #fbfbfb;
 }
 
-.tips-text> h3 { 
+.tips-text,.tips-text-2> h3 { 
   padding: 1% 10%;
   text-align: center;
+}
+
+.tips-text-2> p {
+  text-align: center;
+  padding: 2% 1% 5% 1%;
 }
 
 .tips-video {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 200px;
+  padding: 1% 10%; /*porcentajes*/
   
 }
 
