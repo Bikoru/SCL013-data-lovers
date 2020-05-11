@@ -198,7 +198,7 @@ footer {
   font-weight: 700;
   height: 40px;
   background: rgba(75, 234, 82, 0.57);
-  
+
 }
 
 /**/
@@ -223,7 +223,7 @@ footer {
   background-color: #E5E5E5;
   width: 150px;
   height: 30px;
-  
+
 }
 /*bloqueo*/
 .dropdown-filters option:hover::before {
@@ -231,7 +231,7 @@ footer {
   background-color: #fbfbfb;
 }
 
-.tips-text,.tips-text-2> h3 { 
+.tips-text,.tips-text-2> h3 {
   padding: 1% 10%;
   text-align: center;
 }
@@ -245,7 +245,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1% 10%; /*porcentajes*/
-  
+
 }
 
 /*Etiquetas pokemon tipo de las cardDiv*/
