@@ -79,9 +79,15 @@ function createCardForPokemon(pokemon) {
     pokemonImg.src = pokemon.img;
     cardDiv.appendChild(pokemonImg);
 
-    const pokeType = document.createElement("p");
-    pokeType.innerText = pokemon.type;
-    cardDiv.appendChild(pokeType);
+    const pokeTypes = document.createElement("p");
+    pokeTypes.className = 'text-types';
+    for (const type of pokemon.type) {
+        const pokeType = document.createElement("span");
+        pokeType.className = type.toLowerCase(); 
+        pokeTypes.appendChild(pokeType);
+    }
+    //pokeType.innerText = pokemon.type;
+    cardDiv.appendChild(pokeTypes);
 
     return cardDiv;
 }
