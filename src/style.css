@@ -198,17 +198,138 @@ footer {
   font-weight: 700;
   height: 40px;
   background: rgba(75, 234, 82, 0.57);
+
 }
 
-/*contenedor*/
-#select-filters {
-  position: fixed;
+/**/
+.text-pokedex> p {
+  text-align: center;
+  padding: 1% 10%;
+}
+/*contenedor dropdown list*/
+.select-filters {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items:flex-start;
-  width: 100%;
-  /*max-width: ; */ 
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
   min-width: 374px;
-  
+  padding: 5px;
+}
+
+.dropdown-filters {
+  border-radius: 20px;
+  background-color: #E5E5E5;
+  width: 150px;
+  height: 30px;
+
+}
+/*bloqueo*/
+.dropdown-filters option:hover::before {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
+
+.tips-text,.tips-text-2> h3 {
+  padding: 1% 10%;
+  text-align: center;
+}
+
+.tips-text-2> p {
+  text-align: center;
+  padding: 2% 1% 5% 1%;
+}
+
+.tips-video {
+  display: flex;
+  justify-content: center;
+  padding: 1% 10%; /*porcentajes*/
+
+}
+
+/*Etiquetas pokemon tipo de las cardDiv*/
+.text-types span::before {
+  border-radius: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 2px;
+  color: white;
+}
+
+.grass::before {
+  content: 'Green';
+  background: #78C850;
+}
+
+.poison::before {
+  content: 'Poison';
+  background: #A040A0;
+}
+
+.water::before {
+  content: 'Water';
+  background: #6890F0;
+}
+
+.bug::before {
+  content: 'Bug';
+  background: #A8B820;
+}
+
+.dragon::before {
+  content: 'Dragon';
+  background: #7860E0;
+}
+
+.electric::before {
+  content: 'Electric';
+  background: #F8D030;
+}
+
+.ghost::before {
+  content: 'Ghost';
+  background: #6060B0;
+}
+
+.fire::before {
+  content: 'Fire';
+  background: #F08030;
+}
+
+.ice::before {
+  content: 'Ice';
+  background: #98D8D8;
+}
+
+.fighting::before {
+  content: 'Fighting';
+  background: #C02038;
+}
+
+.normal::before {
+  content: 'Normal';
+  background: #A8A878;
+}
+
+.psychic::before{
+  content: 'Psychic';
+  background: #F85888;
+}
+
+.rock::before {
+  content: 'Rock';
+  background: #B8A058 ;
+}
+
+.ground::before {
+  content: 'Ground';
+  background: #E0C068;
+}
+
+.flying::before {
+  content: 'Flying';
+  background: #A890F0;
 }

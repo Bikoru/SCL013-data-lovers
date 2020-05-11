@@ -24,7 +24,7 @@
       <div id="browser" class="browser">
         <input type="text" placeholder="Ingresa el nombre de tu Pokemon" id="search-text-input" />
         <div id="btn-holder">
-          <img src="Images/magnifying_glass.png.png" />
+          <img src="Images/magnifying_glass.png" />
         </div>
       </div>
       <!-- Hamburguesa para responsive-->
@@ -70,7 +70,13 @@
       </div>
     </section>
     <section id="pag-pokedex">
-      <div id="select-filters">
+      <div class="text-pokedex">
+        <p>La Pokedex te permitirá conocer el listado completo de pokemones de la región de <strong>Kanto</strong>
+          (si quiere saber más, haz click en la pokeparada)
+          Puedes filtrar, buscar un pokemon concreto u ordenarlos para mayor comodidad
+        </p>
+      </div>
+      <div class="select-filters">
         <select name="" id="select-pokedex" class="dropdown-filters">
           <option value="type">Tipo</option>
           <option value="Water">Agua</option>
@@ -103,31 +109,43 @@
       </div>
       <div id="pokemon-list"></div>  <!--generador de la tarjeta donde se muestra el pokemon-->
     </section>
-    <section id="pag-detalle"> <!-- historia 2-->
+    <section id="pag-details"> <!-- historia 2-->
     </section>
     <section id="pag-ranking">
-      <table>
-        <!--con html dinámico-->
-        <tr>
-          <th>Posición</th>
-          <th>N° Pokedex</th>
-          <th>Nombre</th>
-          <th>Frecuencia de aparición</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>002</td>
-          <td>Ivisaur</td>
-          <td>4.2%</td>
-        </tr>
-      </table>
+      <div id="text-ranking">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Augue eget arcu dictum varius
+          duis at consectetur lorem donec. Id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi
+          scelerisque eu. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Est sit amet facilisis
+          magna etiam tempor orci eu. Feugiat sed lectus vestibulum mattis. Posuere ac ut consequat semper.
+          In vitae turpis massa sed elementum tempus egestas. Enim sit amet venenatis urna cursus eget nunc scelerisque.
+        </p>
+        <br />
+      </div>
+      <div id="rankingP">
+
+      </div>
     </section>
     <section id="pag-tips">
-      <h1>Tips durante la contingencia</h1>
-      <h3>¡Truco para abrir huevos desde casa muy rápido!</h3>
-      <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/wtavSOaOhhs" frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-      <h4></h4>
+      <div class="tips-text">
+        <h1>Tips durante la contingencia</h1>
+        <h3>¡Truco para abrir huevos desde casa muy rápido!</h3>
+      </div>
+      <div class="tips-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wtavSOaOhhs" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="tips-text-2">
+        <h3>Poder elegir a Pikachu como inicial</h3>
+        <p>Lo primero que tenemos que hacer al iniciar Pokémon GO es crear a nuestro personaje y elegir entre capturar
+          a uno de los tres primeros Pokémon que veremos: Charmander, Bulbasaur y Squirtle. Pues bien, lo que debemos hacer
+          es ignorarlos y seguir avanzando hasta haber dado unas cuantas vueltas con el juego en funcionamiento. En ese momento,
+          Pikachu aparecerá al lado de los tres Pokémon iniciales y podremos capturarlo nada más comenzar Pokémon GO. Así es como
+          se captura a Pikachu al principio del juego, aunque, por supuesto, podréis hacerlo también en cualquier otro momento,
+          siempre y cuando lo encontréis.
+        </p>
+      </div>
     </section>
     <div id="root"></div>
     <!--//contenedor raíz que traerá toda la información desde JS-->

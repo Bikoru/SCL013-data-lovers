@@ -42,9 +42,9 @@ Como jugador quiero poder filtrar por Huevo para saber al momento de incubar por
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá Filtrar por Huevo de aparición.
-- [ ] El usuario podrá visualizar por lista los Pokemon que cumplan el filtro.
-- [ ] Se podrá visualizar en cualquier dispositivo.
+- [x] El usuario podrá Filtrar por Huevo de aparición.
+- [x] El usuario podrá visualizar por lista los Pokemon que cumplan el filtro.
+- [x] Se podrá visualizar en cualquier dispositivo.
 
 ### 2.4. Historia 4
 
