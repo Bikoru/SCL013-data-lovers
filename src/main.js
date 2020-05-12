@@ -27,15 +27,15 @@ function relatedElements(elementsId) {
 }
 
 function setupNavigationListeners() {
-    relatedElements(["pokedex-link", "nav-pokedex-link"]).forEach(element => {
+    relatedElements(["pokedex-link", "nav-pokedex-link", "nav-pokedex-link2"]).forEach(element => {
         element.addEventListener('click', () => { showSection('pag-pokedex');
         const pokemons = sortedPokemons(pokeData.pokemon, 'id', "order");
         createAllPokemonCards(pokemons); });
     });
-    relatedElements(["ranking-link", "nav-ranking-link"]).forEach(element => {
+    relatedElements(["ranking-link", "nav-ranking-link", "nav-ranking-link2"]).forEach(element => {
         element.addEventListener('click', () => { showSection('pag-ranking'), rankingPokemon (); });
     });
-    relatedElements(["tips-link", "nav-tips-link"]).forEach(element => {
+    relatedElements(["tips-link", "nav-tips-link", "nav-tips-link2"]).forEach(element => {
         element.addEventListener('click', () => { showSection('pag-tips');  });
     });
 }

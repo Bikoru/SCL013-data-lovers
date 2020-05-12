@@ -16,18 +16,92 @@
 /* Responsive*/
 
 @media (max-width: 700px) {
+  header {
+    width: 100%;
+    height: 50px;
+  }
 
-  .menu-toggle {
-    display: block;
+  #top-nav{
+    display:none;
+  }
+
+  #top-nav2{
+    display: flex;
+  }
+
+.btn-menu2 {
+  text-align: center;
+  width: 100%;
+  padding: 1% 2%;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  background: rgba(75, 234, 82, 0.57);
+}
+
+.btn-menu2:hover {
+  /* Linea que aparece abajo de cada enlace del menu */
+  background: #1D8696;
+  color: #ffffff;
+}
+
+#btn-holder>img {
+  width: 20px;
+}
+
+body{
+  width: 100%;
+  min-width: 370px;
+}
+  #pag-home, #pag-tips {
+    background-image:none;
+  }
+
+  .dPokemon{
+    padding: 1% 1% 8%;
   }
 }
 
-/* Header*/
+@media (min-width: 701px){
 
-header {
-  width: 100%;
-  height: 100px;
+  header {
+    width: 100%;
+    height: 100px;
+  }
+
+  #top-nav {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
+#top-nav2{
+  display: none;
+
+}
+
+#btn-holder>img {
+  width: 30px;
+}
+
+.dPokemon{
+  padding: 1% 0%;
+}
+
+}
+
+@media (min-width: 1300px){
+
+  #pag-home, #pag-tips {
+    background-image: url(./Images/background-01.jpg);
+    background-size: cover;
+  }
+}
+
+/* fin responsive*/
+
+/* Header*/
 
 .site-nav {
   position: fixed;
@@ -45,7 +119,6 @@ header {
 }
 
 #logoBtn,
-#top-nav,
 #browser {
   display: flex;
   align-items: center;
@@ -54,7 +127,7 @@ header {
 
 #logoBtn {
   width: 30%;
-  padding-right: 20%;
+  padding-right: 10%;
 }
 
 #top-nav {
@@ -93,9 +166,6 @@ header {
   border-style: hidden;
 }
 
-#btn-holder>img {
-  width: 30px;
-}
 
 ::placeholder {
   color: #9C9A9A;
@@ -116,14 +186,12 @@ header {
   height: auto;
   flex-direction: column;
   justify-content: center;
-
 }
 
 /*averiguar otras medidas*/
 .intro-img {
   /* iconos pag-home*/
   width: 220px;
-  padding: 0% 3%;
 }
 
 
@@ -135,9 +203,7 @@ header {
 #intro-text,
 #img-container {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 #intro-text {
@@ -147,14 +213,15 @@ header {
   padding-bottom: 5%;
 }
 
+
 #intro-text>h1,
 .welcome-text {
-  padding: 1% 10%;
+  padding: 1% 20%;
 }
 
 #img-container {
-  width: 100%;
-  justify-content: space-evenly;
+  width: 70%;
+  justify-content:center;
   padding-bottom: 5%;
 }
 
@@ -237,8 +304,8 @@ footer {
 }
 
 .tips-text-2> p {
-  text-align: center;
-  padding: 2% 1% 5% 1%;
+  text-align: justify;
+  padding: 2% 15%;
 }
 
 .tips-video {
