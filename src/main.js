@@ -152,50 +152,56 @@ function createDetailPokemon(id) {
 
       //Creamos los elementos en la sección Pag-Detail
       pokeDetail.innerHTML+=`
-      <div id="rightDetail">
-          <div id="imgPokemon">
-            <p>${data[id].num}</p>
-            <img src=${data[id].img} alt=${data[id].num}>
-            <p>${data[id].name}</p>
-            <hr>
+      <div id="pokedexDetail">
+          <div id="leftDetail">
+              <div id="imgPokemon">
+                <p class="left-style">${data[id].num}</p>
+                <img src=${data[id].img} alt=${data[id].num} class="left-style">
+                <p class="left-style">${data[id].name}</p>
+                <hr class="left-style">
+              </div>
+              <div>
+                <p class="left-style">Tiempo de aparición: ${data[id].spawn_time} hrs.</p>
+                <div id="eggIcon">
+                  <img src="./Images/egg.png" alt="${data[id].egg}" class="left-style">
+                    <p class="left-style">${data[id].egg}</p>
+                </div>  
+                  <div>
+                    <p>Multiplicadores: ${data[id].multipliers}</p>  
+                  </div>
+              </div>
           </div>
-          <div>
-            <p>Tiempo de aparición: ${data[id].spawn_time} hrs.</p>
-            <div id="eggIcon">
-            <img src="./Images/egg.png" alt="${data[id].egg}">
-              <p>${data[id].egg}</p>
-              <p>Multiplicadores: ${data[id].multipliers}</p>
+          <div id="centerDetail">
+            <div id="typeP">
+              <p class="titleStyle">Tipo</p>
+              <p class="centerStyle">${data[id].type}</p>
+            </div>
+            <div id="weaknessesP">
+              <p class="titleStyle">Debilidades</p>
+              <p>${data[id].weaknesses}</p>
+            </div>
+          </div>  
+          <div id="rightDetail">
+            <div id="heightP">
+              <p class="titleStyle">Altura</p>
+              <p class="rightStyle">${data[id].height}</p>
+            </div>
+            <div id="ratio">
+              <p class="titleStyle">Ratio de Aparición</p>
+              <p class="rightStyle">${data[id].spawn_chance}</p>
+            </div>
+            <div id="weightP">
+              <p class="titleStyle">Peso</p>
+              <p class="rightStyle">${data[id].weight}</p>
+            </div>
+            <div id="candyP">
+              <p class="titleStyle">Caramelos para evolucionar</p>
+              <div id="candyStyle">
+                <img src="./Images/candy.png" alt="${data[id].candy}">
+                <p>${data[id].candy_count}</p>
+              </div>  
             </div>
           </div>
-      </div>
-      <div id="rightDetail">
-        <div id="typeP">
-          <p>Tipo</p>
-          <p>${data[id].type}</p>
-        </div>
-        <div id="weaknessesP">
-          <p>Debilidades</p>
-          <p>${data[id].weaknesses}</p>
-        </div>
-        <div id="detailP">
-          <div id="heightP">
-            <p>Altura</p>
-            <p>${data[id].height}</p>
-          </div>
-          <div id="ratio">
-            <p>Ratio de Aparición</p>
-            <p>${data[id].spawn_chance}</p>
-          </div>
-          <div id="weightP">
-            <p>Peso</p>
-            <p>${data[id].weight}</p>
-          </div>
-          <div id="candyP">
-            <p>Caramelos para evolucionar</p>
-             <img src="./Images/candy.png" alt="${data[id].candy}">
-            <p>${data[id].candy_count}</p>
-          </div>
-        </div>
       </div>`
     })
   }
