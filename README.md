@@ -101,6 +101,8 @@ Para comenzar a diseñar la plataforma, ideamos 2 Tipos de prototipos, el baja f
  - El de baja fidelidad que nos ayuda a organizar a grandes rasgos los elementos que tendría la plataforma.
  - El prototipo de Alta fidelidad para poder llevarlo al testeo de usabilidad con usuarios.
 
+Puedes revisar nuestro prototipo de alta fidelidad también en [Zeplin](https://zpl.io/scene/bJJqxKJ)
+
 #### 3.1. Prototipos
 ##### 3.1.1. Baja Fidelidad
 ![Popup](http://imgfz.com/i/J9eDxZH.png)
@@ -140,5 +142,56 @@ Utilizamos la fuente **Roboto**, que es una familia de fuentes del tipo Sans-ser
 ![Tipografía Roboto](https://norfipc.com/img/web/fuente-roboto.jpeg)
 
 ## 4. Testeos de usabilidad
-Utilizando el prototipo de alta fidelidad realizado en Figma, se preparó el testeo de usuario en la plataforma **Maze**, que se encuentra en proceso. Hasta el momento 16 testeadores han probado la aplicación, la cual se cerrará mañana Viernes 08/05 a las 23:59 hrs.
-Si quieres ayudarnos con un testeo, haz click [Aquí](https://t.maze.design/11018493)
+Utilizando el prototipo de alta fidelidad realizado en Figma, se realizó el testeo de usabilidad en **Maze**,  finalizando con **19 usuarios** y logrando recopilar respuestas en las que nos basamos para las mejoras en el proyecto final
+
+### 4.1. Resultados testeo de usabilidad
+
+- #### Encuentra el listado de Pokemon
+![list-pokemon](http://imgfz.com/i/Dyf2YWe.jpeg)
+Donde un 89.5% de usuarios lograron completar la misión de manera directa y un 10.5% encontró caminos alternativos para lograrlo.
+
+- #### Filtra por tipo eléctrico
+![result-filter](http://imgfz.com/i/iRBb3qH.jpeg)
+Donde un 89.5% de los usuarios lo completó de manera directa y un 5.3% lo logró por caminos alternativos y  un 5.3% abandonó la misión.
+
+ - #### ¿Que tan complicado fueron las misiones anteriores?
+ Se le pidió al usuario seleccionar que tan complicado fue realizar las misiones anteriores, donde la escala fue **"5 muy complicado"** y **"1 nada complicado"**![maze-result](http://imgfz.com/i/dFMQEwz.jpeg)
+Logrando  concluir que el 94% consideró que fue "nada complicado" las misiones de encontrar la Pokedex y Filtrar por tipo Eléctrico y un 6% poco complicado.
+
+- #### Ingresa al detalle de Ivysaur
+Donde intencionalmente se inició a los usuarios en la página inicial para aplicar todo lo anterior y poder acceder al detalle del pokemon
+![detail-mision](http://imgfz.com/i/SsG9Eax.jpeg)
+Los resultaron fueron que un 77.8% lograron la misión directamente, un 22.2% logró la misión por caminos alternativos, recopilando que tanto ingresar por la pokedex, filtrado o por el buscador se lograba el objetivo principal.
+
+- #### De las siguientes características, marca las que consideres que se cumplen en la última misión
+Necesitábamos saber si la cantidad de información que estábamos presentando al usuario eran suficientes o si entendía.
+
+![caracteristicas-test](http://imgfz.com/i/YFmRIKV.jpeg)
+Y según lo que recopilamos el 94% entiende que se puede acceder a un detalle, el 61% entiende la información y un 6% indica que falta información o datos complementarios, este último en la ultima pregunta logramos entender que faltaba para mejorar.
+
+- #### ¡Ultima misión! Ingresa en el Ranking de frecuencia de aparición
+El objetivo de la última misión era para saber si era de fácil acceso para el usuario y para recopilar si se entendía la información
+![result-ranking](http://imgfz.com/i/SKiTXrI.jpeg)
+Donde un 88.9% logró completar la misión directamente y un 11,1% logró completarla por caminos alternativos.
+
+- #### Con la información que te presentamos en el Home ¿Se entiende que es un Top 10 de frecuencia de aparición?
+![maze-ranking](http://imgfz.com/i/t2LC4jk.jpeg)
+Según lo mencionado anteriormente un 83% indicó que si se entiende de que trata el Ranking versus un 17% que indicó que no se entendía, por lo que la pregunta final fue de suma importancia para entender todas las preguntas anteriores.
+
+- #### ¡Ayúdanos a mejorar!
+Decidimos realizar la pregunta abierta para que los usuarios nos pudieran contar como mejorar en base al testeo anterior, por lo que rescatamos algunos mensajes con detalles que consideramos importantes a destacar como:
+![tester1](http://imgfz.com/i/LFVRXGW.jpeg)
+![tester2](http://imgfz.com/i/9bvXMuh.jpeg)
+![tester3](http://imgfz.com/i/oghB8Kw.jpeg)
+![tester4](http://imgfz.com/i/TPbkRC9.jpeg)
+![tester5](http://imgfz.com/i/01fwULp.jpeg)
+![tester6](http://imgfz.com/i/7jB1e90.jpeg)
+
+### 4.2. Aspectos a mejorar
+En base al análisis anterior creamos un listado con puntos a mejorar:
+
+ - Crear un botón de **"Ver Detalles"** para indicar al usuario que al clickear se accede a más información.
+ - Generar una glosa explicativa en la sección de ranking y cambiar la columna de **Frecuencia de Aparición** por **Ratio de Aparición**
+ - En el Home profundizar que es o hace cada sección.
+ - Aumentar el interlineado para facilitar la lectura
+ - Agregar un texto explicatorio en la sección ranking para mayor entendimiento del usuario.
