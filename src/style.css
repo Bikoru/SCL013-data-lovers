@@ -209,29 +209,31 @@ footer {
 /*contenedor dropdown list*/
 .select-filters {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
-  min-width: 374px;
-  padding: 5px;
-}
+  width: 100%;
+  padding: 1% 1%;
+  font-size: 14px;
+    
+ } 
 
+ /*responsive con contenedor div flex-direction-->no funcionó*/
 .dropdown-filters {
   border-radius: 20px;
   background-color: #E5E5E5;
   width: 150px;
   height: 30px;
+ }
 
-}
-/*bloqueo*/
-.dropdown-filters option:hover::before {
-  color: #546c84;
-  background-color: #fbfbfb;
+select:hover {
+  color: #444645;
+  background: #ddd;
+  cursor: pointer;
+  
 }
 
-.tips-text,.tips-text-2> h3 {
+.tips-text, .tips-text-2> h3 {
   padding: 1% 10%;
   text-align: center;
 }
@@ -246,6 +248,17 @@ footer {
   justify-content: center;
   padding: 1% 10%; /*porcentajes*/
 
+}
+
+.tips-text-2 {
+  display: flex;
+  justify-content: center;
+  align-content: column;
+  padding: 1% 10%; /*porcentajes*/
+}
+
+.tips-text-2> img {
+  min-width: 376px;
 }
 
 /*Etiquetas pokemon tipo de las cardDiv*/
