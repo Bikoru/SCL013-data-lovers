@@ -52,9 +52,9 @@ Como jugador quiero al clickear una tarjeta de Pokemon entrar a ver el detalle d
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá clickear la tarjeta de Pokemon e ingresar a una sección nueva.
-- [ ] El usuario podrá visualizar las características y debilidades del Pokemon.
-- [ ] La página se podrá visualizar en cualquier dispositivo.
+- [x] El usuario podrá clickear la tarjeta de Pokemon e ingresar a una sección nueva.
+- [x] El usuario podrá visualizar las características y debilidades del Pokemon.
+- [x] La página se podrá visualizar en cualquier dispositivo.
 
 
 ### 2.5. Historia 5
@@ -73,8 +73,8 @@ Como jugador quiero saber cuántos caramelos necesita un Pokemon para evoluciona
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá visualizar en sus características cuantos caramelos necesita para evolucionar.
-- [ ] Se podrá visualizar en cualquier dispositivo.
+- [x] El usuario podrá visualizar en sus características cuantos caramelos necesita para evolucionar.
+- [x] Se podrá visualizar en cualquier dispositivo.
 
 #### 2.7. Historia 7
 
@@ -82,7 +82,7 @@ Como jugador quiero saber el top 10 de frecuencia de aparición de los Pokemon p
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá visualizar una tabla de posición con los que tienen mayor frecuencia de aparición.
+- [x] El usuario podrá visualizar una tabla de posición con los que tienen mayor frecuencia de aparición.
 - [ ] La página se podrá visualizar en cualquier dispositivo.
 
 #### 2.8. Historia 8
@@ -91,8 +91,8 @@ Como jugador nuevo quiero conocer algunos tips para que ayuden a subir de nivel,
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá visualizar un listado de tips con Título, descripción y/o vídeo explicativo.
-- [ ] La página se podrá visualizar en cualquier dispositivo.
+- [x] El usuario podrá visualizar un listado de tips con Título, descripción y/o vídeo explicativo.
+- [x] La página se podrá visualizar en cualquier dispositivo.
 
 -----
 ## 3.- Proceso de Diseño
@@ -139,6 +139,7 @@ La paleta de colores se definió en base a la misma del juego "Pokemon Go", pero
 ![Palera de colores](http://imgfz.com/i/1WQdOEA.jpeg)
 ### 3.3. Tipografía
 Utilizamos la fuente **Roboto**, que es una familia de fuentes del tipo Sans-serif, las cuales son del tipo de fuentes tipográficas sin adornos, pequeñas terminaciones o remates, recomendadas para usar en pantallas, para evitar sobrecargar o cansar la vista y facilitar la lectura.
+\
 ![Tipografía Roboto](https://norfipc.com/img/web/fuente-roboto.jpeg)
 
 ## 4. Testeos de usabilidad
