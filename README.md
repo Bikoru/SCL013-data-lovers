@@ -4,8 +4,25 @@
 
 *  [1. Introducción](##-1.-Introducción)
 *  [2. Historias](###-2.1.-Historia-1)
+	* [2.1. Historia 1](###-2.1.-Historia-1)
+	* [2.2. Historia 2](###-2.2.-Historia-2)
+	* [2.3. Historia 3](###-2.3.-Historia-3)
+	* [2.4. Historia 4](###-2.4.-Historia-4)
+	* [2.5. Historia 5](###-2.5.-Historia-5)
+	* [2.6. Historia 6](###-2.6.-Historia-6)
+	* [2.7. Historia 7](###-2.7.-Historia-7)
+	* [2.8. Historia 8](###-2.8.-Historia-8)
 *  [3. Proceso de Diseño](##-3.--Proceso-de-Diseño)
+  * [3.1. Prototipos](####-3.1.-Prototipos)
+		* [3.1.1. Baja Fidelidad](#####-3.1.1.-Baja-Fidelidad)
+		* [3.1.2. Alta Fidelidad](#####-3.1.2.-Alta-Fidelidad)
+	* [3.2. Paleta de Colores](####-3.2.-Paleta-de-Colores)
+		* [3.2.1 Colores Base](#####-3.2.1-Colores-Base)
+  * [3.3. Tipografía](###-3.3.-Tipografía)
 *  [4. Testeos de usabilidad](##-4.-Testeos-de-usabilidad)
+  * [4.1. Resultados testeo de usabilidad](###-4.1.-Resultados-testeo-de-usabilidad)
+  * [4.2. Aspectos a mejorar](###-4.2.-Aspectos-a-mejorar)
+
 
 ## 1.- Introducción
 

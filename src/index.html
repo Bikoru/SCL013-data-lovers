@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
   <header>
@@ -52,8 +54,15 @@
           actualizando estos datos.</p>
         <br>
         <p class="welcome-text">Te invitamos a navegar en las siguientes secciones, para brindarte
-          toda la informacion que necesitas para comenzar:
+          toda la informacion que necesitas para comenzar, en las cuales puedes encontrar:
         </p>
+      </div>
+      <div id="text-list">
+        <ul>
+          <li><strong>Pokedex: </strong>Donde podrás encontrar informacion sobre los pokemons y visualizar su detalle.</li>
+          <li><strong>Ranking: </strong>Podrás visualizar el top 10 de los pokemon con mayor aparición</li>
+          <li><strong>Tips: </strong>Aquí encontrarás consejos que te ayudarán durante tu aventura</li>
+        </ul>
       </div>
       <div id="img-container">
         <div>
@@ -117,21 +126,20 @@
       <div id="pokemon-list"></div>  <!--generador de la tarjeta donde se muestra el pokemon-->
     </section>
     <section id="pag-details"> <!-- historia 2-->
-      
+
     </section>
     <section id="pag-ranking">
       <div id="text-ranking">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Augue eget arcu dictum varius
-          duis at consectetur lorem donec. Id consectetur purus ut faucibus pulvinar. Accumsan in nisl nisi
-          scelerisque eu. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Est sit amet facilisis
-          magna etiam tempor orci eu. Feugiat sed lectus vestibulum mattis. Posuere ac ut consequat semper.
-          In vitae turpis massa sed elementum tempus egestas. Enim sit amet venenatis urna cursus eget nunc scelerisque.
+        <p> Bienvenid@ a la sección Ranking! Aquí encontrarás a los Top 10 Pokemons con mejor
+          <strong>Ratio de Aparición</strong>. Esto quiere decir que a la hora de ir a atrapar
+          Pokemons podrás encontrar uno de estos 10 con mayor facilidad y ¿por qué no? ¡Atraparlos! &#129331;
         </p>
         <br />
       </div>
       <div id="rankingP">
+          <table id= "tableR">
 
+          </table>
       </div>
     </section>
     <section id="pag-tips">
@@ -154,7 +162,7 @@
           siempre y cuando lo encuentres.
         </p>
         <div class="tips-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/n4L61R1VzZo" frameborder="0" 
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/n4L61R1VzZo" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
           </iframe>
         </div>

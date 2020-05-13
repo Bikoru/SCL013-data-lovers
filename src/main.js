@@ -171,9 +171,9 @@ function createDetailPokemon(id) {
                 <div id="eggIcon">
                   <img src="./Images/egg.png" alt="${data[id].egg}" class="left-style">
                     <p class="left-style">${data[id].egg}</p>
-                </div>  
+                </div>
                   <div>
-                    <p>Multiplicadores: ${data[id].multipliers}</p>  
+                    <p>Multiplicadores: ${data[id].multipliers}</p>
                   </div>
               </div>
           </div>
@@ -186,7 +186,7 @@ function createDetailPokemon(id) {
               <p class="titleStyle">Debilidades</p>
               <p>${data[id].weaknesses}</p>
             </div>
-          </div>  
+          </div>
           <div id="rightDetail">
             <div id="heightP">
               <p class="titleStyle">Altura</p>
@@ -205,11 +205,11 @@ function createDetailPokemon(id) {
               <div id="candyStyle">
                 <img src="./Images/candy.png" alt="${data[id].candy}">
                 <p>${data[id].candy_count}</p>
-              </div>  
+              </div>
             </div>
           </div>
       </div>`
-      
+
       const evolutionTitle = document.createElement('h2');
       evolutionTitle.className = 'evolutionTitle';
       evolutionTitle.innerHTML = 'Evoluciones';
@@ -218,13 +218,13 @@ function createDetailPokemon(id) {
       const current = data[id];
 
       const pokemonLine = Array()               // Crea un arreglo
-        .concat(current.next_evolution)         // Concatena el arreglo al arreglo next_evolution 
+        .concat(current.next_evolution)         // Concatena el arreglo al arreglo next_evolution
         .concat(current.prev_evolution)         // Concatena el arreglo al arreglo prev_evolution
         .filter( (element) => element != null ) // Filtra que ninguno de los arreglos sea nulo (undefined)
         .flatMap( (element) => {                // Mapeamos arreglo único con objetos Pokemon
           return data.find( (pokemon) => {      // El método find retornará un pokemon desde 'data
             return pokemon.num === element.num; // El num de pokemon y element deben ser iguales
-          }); 
+          });
         });
 
 
@@ -236,7 +236,7 @@ function createDetailPokemon(id) {
       // Agregamos los pokemons a la lista
       addPokemonEvolutionsCards(pokeDetail, sortedLine);
     })
-    
+
   }
 }
 // Agregamos los pokemons a la lista
@@ -264,31 +264,30 @@ function addPokemonEvolutionsCards(details, pokemons) {
     details.appendChild(evolutionDiv);
 }
 
+
 function rankingPokemon (){
-  const rankingP = document.getElementById("rankingP");
+
+  var rankingP = document.getElementById('tableR');
   let pokemons = sortedPokemons(pokeData.pokemon, 'spawn_chance', "ranking");
-  rankingP.innerHTML = "";
+  rankingP.innerHTML = `<tr>
+                          <th class="column1"> Posicion </th>
+                          <th class="column2"> N° Pokedex </th>
+                          <th> Nombre </th>
+                          <th class="column4"> Ratio de aparición </th>
+                        </tr>`
 
-  for (let i = 0; i<10; i++ ) {
+  for (let i = 0; i<10; i++ ){
 
-    rankingP.innerHTML+= `<table>
-    <tr>
-      <th>Posición</th>
-      <th>N° Pokedex</th>
-      <th>Nombre</th>
-      <th>Ratio de aparición</th>
-    </tr>
-    <tr>
-      <td>${i+1}</td>
-      <td>${pokemons[i].num}</td>
-      <td><img src=${pokemons[i].img} alt=${pokemons[i].num}> ${pokemons[i].name}</td>
-      <td>${pokemons[i].spawn_chance}</td>
-    </tr>
-  </table>`
+  rankingP.innerHTML+= `
+        <tr>
+        <td class="column1">${i+1}</td>
+        <td class="column1">${pokemons[i].num}</td>
+        <td class="column3"><img src=${pokemons[i].img} alt=${pokemons[i].num}> ${pokemons[i].name}</td>
+        <td class="column4">${pokemons[i].spawn_chance}%</td>
+        </tr>`
+
   }
 }
-
-
 
 setupNavigationListeners();
 setupSelectionsListeners();
