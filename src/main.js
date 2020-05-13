@@ -113,6 +113,12 @@ function createCardForPokemon(pokemon) {
     }
     cardDiv.appendChild(pokeTypes);
 
+    return cardDiv;
+}
+
+function createPokemonCardWithListeners(pokemon) {
+    const cardDiv = createCardForPokemon(pokemon);
+
     const pokeBtn = document.createElement("button");
     pokeBtn.type = 'button';
     pokeBtn.innerText = 'Ver Detalles';
@@ -130,7 +136,7 @@ function createAllPokemonCards(pokemons) {
     pokemonList.innerHTML = '';
 
     for (const pokemon of pokemons) {
-        const cardDiv = createCardForPokemon(pokemon);
+        const cardDiv = createPokemonCardWithListeners(pokemon);
         pokemonList.appendChild(cardDiv);
     }
 }
@@ -203,8 +209,59 @@ function createDetailPokemon(id) {
             </div>
           </div>
       </div>`
+      
+      const evolutionTitle = document.createElement('h2');
+      evolutionTitle.className = 'evolutionTitle';
+      evolutionTitle.innerHTML = 'Evoluciones';
+      pokeDetail.appendChild(evolutionTitle);
+
+      const current = data[id];
+
+      const pokemonLine = Array()               // Crea un arreglo
+        .concat(current.next_evolution)         // Concatena el arreglo al arreglo next_evolution 
+        .concat(current.prev_evolution)         // Concatena el arreglo al arreglo prev_evolution
+        .filter( (element) => element != null ) // Filtra que ninguno de los arreglos sea nulo (undefined)
+        .flatMap( (element) => {                // Mapeamos arreglo único con objetos Pokemon
+          return data.find( (pokemon) => {      // El método find retornará un pokemon desde 'data
+            return pokemon.num === element.num; // El num de pokemon y element deben ser iguales
+          }); 
+        });
+
+
+      pokemonLine.push(current);                // Agregamos que elegimos pokemon a la lsita de evoluciones
+
+      // Obtenemos una lista de pokemones ordenados por su 'num' de forma 'ascendente'
+      const sortedLine = sortedPokemons(pokemonLine, 'num', 'az');
+
+      // Agregamos los pokemons a la lista
+      addPokemonEvolutionsCards(pokeDetail, sortedLine);
     })
+    
   }
+}
+// Agregamos los pokemons a la lista
+function addPokemonEvolutionsCards(details, pokemons) {
+    const evolutionLine = Array();
+
+    for (const pokemon of pokemons) {
+        evolutionLine.push(createCardForPokemon(pokemon));
+    }
+
+    if ( evolutionLine.length >= 2) {
+        for (let index = evolutionLine.length - 1; index > 0; index--) {
+            const image = document.createElement("img");
+            image.className = 'arrow';
+            image.src = './Images/arrow.png';
+            evolutionLine.splice(index, 0, image);
+        }
+    }
+
+    const evolutionDiv = document.createElement('div');
+    evolutionDiv.className = 'evolution-container';
+
+    evolutionLine.forEach( card => evolutionDiv.appendChild(card) );
+
+    details.appendChild(evolutionDiv);
 }
 
 function rankingPokemon (){
