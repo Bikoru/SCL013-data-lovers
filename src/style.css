@@ -70,6 +70,12 @@ body{
   #rankingP{
     width: 80%;
   }
+  
+  .arrow {
+    height: 50px;
+    width: 50px;
+    transform: rotate(90deg);
+  }
 
 }
 
@@ -107,8 +113,16 @@ body{
   width: 70%;
 }
 
+.arrow {
+  height: 50px;
+  width: 50px;
 }
 
+#browser>input {
+  width: 100%;
+
+}
+}
 @media (min-width: 1300px){
 
   #pag-home {
@@ -189,7 +203,6 @@ body{
   text-align: center;
   border-style: hidden;
 }
-
 
 ::placeholder {
   color: #9C9A9A;
@@ -335,7 +348,7 @@ footer {
 }
 
 .tips-text-2> p {
-  text-align: justify;
+  text-align: left;
   padding: 2% 15%;
 }
 
@@ -556,4 +569,50 @@ margin-bottom: 3%;
 .btnDetails:hover{
   background-color: #1D8696;
   color: white;
+}
+
+.box_search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.search_list_container {
+  width: 270px;
+  margin-top: 5px;
+}
+
+.search_list {
+  width: 270px;
+  position: absolute;
+  padding: 0;
+
+  list-style-type: none;
+  background-color: #E5E5E5;
+  max-height: 500px; 
+  overflow-y: auto;
+}
+
+.search_list li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  font-size: 1em;
+  padding: .25em 1em;
+}
+
+.search_list li:hover {
+  background-color: #99f39c;
+}
+
+.search_list {
+  border-radius: 5px;
+}
+
+.search-image {
+  max-height: 30px;
 }
