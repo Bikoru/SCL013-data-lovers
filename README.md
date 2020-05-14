@@ -80,9 +80,9 @@ Como jugador quiero poder visualizar las evoluciones de cada Pokemon para saber 
 
 **Criterios de aceptación:**
 
-- [ ] El usuario podrá visualizar cuales son las evoluciones del Pokemon antes y después.
-- [ ] El usuario podrá visualizar cada evolución con su número. nombre, imagen y tipo.
-- [ ] Se podrá visualizar en cualquier dispositivo.
+- [x] El usuario podrá visualizar cuales son las evoluciones del Pokemon antes y después.
+- [x] El usuario podrá visualizar cada evolución con su número. nombre, imagen y tipo.
+- [x] Se podrá visualizar en cualquier dispositivo.
 
 ### 2.6. Historia 6
 
@@ -100,7 +100,7 @@ Como jugador quiero saber el top 10 de frecuencia de aparición de los Pokemon p
 **Criterios de aceptación:**
 
 - [x] El usuario podrá visualizar una tabla de posición con los que tienen mayor frecuencia de aparición.
-- [ ] La página se podrá visualizar en cualquier dispositivo.
+- [x] La página se podrá visualizar en cualquier dispositivo.
 
 #### 2.8. Historia 8
 
@@ -208,8 +208,17 @@ Decidimos realizar la pregunta abierta para que los usuarios nos pudieran contar
 ### 4.2. Aspectos a mejorar
 En base al análisis anterior creamos un listado con puntos a mejorar:
 
- - Crear un botón de **"Ver Detalles"** para indicar al usuario que al clickear se accede a más información.
- - Generar una glosa explicativa en la sección de ranking y cambiar la columna de **Frecuencia de Aparición** por **Ratio de Aparición**
- - En el Home profundizar que es o hace cada sección.
- - Aumentar el interlineado para facilitar la lectura
- - Agregar un texto explicatorio en la sección ranking para mayor entendimiento del usuario.
+ - [x] Crear un botón de **"Ver Detalles"** para indicar al usuario que al clickear se accede a más información.
+ - [x] Generar una glosa explicativa en la sección de ranking y cambiar la columna de **Frecuencia de Aparición** por **Ratio de
+       Aparición**
+- [x] En el Home profundizar que es o hace cada sección.
+- [x] Aumentar el interlineado para facilitar la lectura
+- [x] Agregar un texto explicatorio en la sección ranking para mayor entendimiento del usuario.
+
+Si tuviéramos oportunidades de iteración, nos gustaría implementar:
+
+ - Tipos y Debilidades en español
+ - Información sobre Pokeparadas
+ - Información sobre objetos
+
+Si quieres visualizar el sitio en su ultima actualización haz click en el siguiente [enlace](https://constlaf.github.io/SCL013-data-lovers/src/index.html)

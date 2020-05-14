@@ -113,7 +113,8 @@ body{
 
   #pag-home {
     background-image: url(./Images/background-01.jpg);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #pag-tips {
