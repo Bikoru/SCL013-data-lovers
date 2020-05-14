@@ -6,13 +6,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/*Hamburguesa para responsive*/
-.menu-toggle {
-  display: none;
-  font-size: 50px;
-  color: #1D8696;
-}
-
 /* Responsive*/
 
 @media (max-width: 700px) {
@@ -90,44 +83,46 @@ body{
   display: flex;
   align-items: center;
   align-content: center;
-}
-#top-nav2{
-  display: none;
+  }
+
+  #top-nav2{
+    display: none;
+  }
+
+  #btn-holder>img {
+    width: 30px;
+  }
+
+  .dPokemon{
+    padding: 1% 0%;
+  }
+
+  #text-ranking{
+    width: 70%;
+    margin-top: 2%;
+  }
+
+  #rankingP{
+    width: 70%;
+  }
+
+  .arrow {
+    height: 50px;
+    width: 50px;
+  }
+
+  #browser>input {
+    width: 100%;
+  }
 
 }
 
-#btn-holder>img {
-  width: 30px;
-}
-
-.dPokemon{
-  padding: 1% 0%;
-}
-
-#text-ranking{
-  width: 70%;
-  margin-top: 2%;
-}
-
-#rankingP{
-  width: 70%;
-}
-
-.arrow {
-  height: 50px;
-  width: 50px;
-}
-
-#browser>input {
-  width: 100%;
-
-}
-}
 @media (min-width: 1300px){
 
   #pag-home {
     background-image: url(./Images/background-01.jpg);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   #pag-tips {
@@ -135,6 +130,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
   }
+
 }
 
 /* fin responsive*/
@@ -193,7 +189,6 @@ body{
   /*tiempo en realizar el efecto */
 }
 
-
 #browser>input {
   width: 270px;
   height: 30px;
@@ -214,9 +209,8 @@ body{
   text-align: center;
 }
 
-
-
 /* Main- seccion home */
+
 #pag-home {
   display: flex;
   width: 100%;
@@ -225,12 +219,10 @@ body{
   justify-content: center;
 }
 
-/*averiguar otras medidas*/
 .intro-img {
   /* iconos pag-home*/
   width: 220px;
 }
-
 
 .intro-text {
   /* Texto pag-home*/
@@ -248,7 +240,6 @@ body{
   display: flex;
   flex-direction: column;
 }
-
 
 #intro-text>h1,
 .welcome-text {
@@ -276,6 +267,7 @@ h1 {
 }
 
 /*Seccion Pokedex */
+
 #pag-pokedex,
 #pag-ranking,
 #pag-tips {
@@ -311,13 +303,14 @@ footer {
 
 }
 
-/**/
 .text-pokedex> p {
   font-size: 22px;
   text-align: center;
   padding: 1% 10%;
 }
+
 /*contenedor dropdown list*/
+
 .select-filters {
   display: flex;
   flex-direction: row;
@@ -334,9 +327,8 @@ footer {
   background-color: #E5E5E5;
   width: 150px;
   height: 30px;
-
 }
-/*bloqueo*/
+
 .dropdown-filters option:hover::before {
   color: #546c84;
   background-color: #fbfbfb;
@@ -356,11 +348,11 @@ footer {
 .tips-video {
   display: flex;
   justify-content: center;
-  padding: 1% 10%; /*porcentajes*/
-
+  padding: 1% 10%; 
 }
 
 /*Etiquetas pokemon tipo de las cardDiv*/
+
 .text-types span::before {
   border-radius: 22px;
   padding-left: 10px;
@@ -447,6 +439,7 @@ footer {
 }
 
 /*Página Pokedex-detalle*/
+
 #pokedexDetail {
   display: flex;
   flex-wrap: wrap;
@@ -464,7 +457,6 @@ footer {
 
 .left-style {
 margin-bottom: 3%;
-
 }
 
 .centerStyle {
