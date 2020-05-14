@@ -1,7 +1,6 @@
 import  pokeData  from './data/pokemon/pokemon.js';
 import { sortedPokemons, filterPokemons } from './data.js';
 
-//Con esta función escondemos todas las secciones en general, menos la página de inicio
 function hideAllSections() {
     document.getElementById('pag-pokedex').style.display = 'none';
     document.getElementById('pag-ranking').style.display = 'none';
@@ -9,12 +8,11 @@ function hideAllSections() {
     document.getElementById('pag-home').style.display = 'none';
     document.getElementById('pag-details').style.display = 'none';
 }
-//Con esta función muestro las secciones que quiero
+
 function showSection(section) {
-    hideAllSections(); //llamo a las secciones escondidas más arriba
-    document.getElementById(section).style.display = 'block'; //y le ordenamos que independiente del link, nos muestre una sección determinada
-}
-// llamamos al id de los <a>, y al evento click, le damos una función anónima para que muestre las secciones deseadas en los parámetros
+    hideAllSections();
+    document.getElementById(section).style.display = 'block';
+  }
 
 function relatedElements(elementsId) {
     const elements = [];
@@ -39,7 +37,6 @@ function setupNavigationListeners() {
         element.addEventListener('click', () => { showSection('pag-tips');  });
     });
 }
-
 
 function setupSelectionsListeners() {
     document.getElementById('select-alphabetic').addEventListener('change', (event) => {
@@ -132,7 +129,6 @@ function createPokemonCardWithListeners(pokemon) {
 
 function createAllPokemonCards(pokemons) {
     const pokemonList = document.getElementById("pokemon-list");
-   //Se le hace un clear a la lista de pokemones originales para que no se sumen los filtros
     pokemonList.innerHTML = '';
 
     for (const pokemon of pokemons) {
@@ -150,103 +146,99 @@ function createDetailPokemon(id) {
     for(let i=0; i<pokeBtnDetail.length; i++){
     let detail=pokeBtnDetail[i];
 
-      // Se le añade un evento de tipo click para llevar a la seccion y para crear los elementos HTML
-
     detail.addEventListener("click", () =>{
-      showSection('pag-details');
-      pokeDetail.innerHTML="";
-
-      //Creamos los elementos en la sección Pag-Detail
-      pokeDetail.innerHTML+=`
-      <div id="pokedexDetail">
-          <div id="leftDetail">
-              <div id="imgPokemon">
-                <p class="left-style">${data[id].num}</p>
-                <img src=${data[id].img} alt=${data[id].num} class="left-style">
-                <p class="left-style">${data[id].name}</p>
-                <hr class="left-style">
-              </div>
-              <div>
-                <p class="left-style">Tiempo de aparición: ${data[id].spawn_time} hrs.</p>
-                <div id="eggIcon">
-                  <img src="./Images/egg.png" alt="${data[id].egg}" class="left-style">
-                    <p class="left-style">${data[id].egg}</p>
-                </div>
-                  <div>
-                    <p>Multiplicadores: ${data[id].multipliers}</p>
-                  </div>
-              </div>
-          </div>
-          <div id="centerDetail">
-            <div id="typeP">
-              <p class="titleStyle">Tipo</p>
-              <p class="centerStyle">${data[id].type}</p>
-            </div>
-            <div id="weaknessesP">
-              <p class="titleStyle">Debilidades</p>
-              <p>${data[id].weaknesses}</p>
-            </div>
-          </div>
-          <div id="rightDetail">
-            <div id="heightP">
-              <p class="titleStyle">Altura</p>
-              <p class="rightStyle">${data[id].height}</p>
-            </div>
-            <div id="ratio">
-              <p class="titleStyle">Ratio de Aparición</p>
-              <p class="rightStyle">${data[id].spawn_chance}</p>
-            </div>
-            <div id="weightP">
-              <p class="titleStyle">Peso</p>
-              <p class="rightStyle">${data[id].weight}</p>
-            </div>
-            <div id="candyP">
-              <p class="titleStyle">Caramelos para evolucionar</p>
-              <div id="candyStyle">
-                <img src="./Images/candy.png" alt="${data[id].candy}">
-                <p>${data[id].candy_count}</p>
-              </div>
-            </div>
-          </div>
-      </div>`
-
-      const evolutionTitle = document.createElement('h2');
-      evolutionTitle.className = 'evolutionTitle';
-      evolutionTitle.innerHTML = 'Evoluciones';
-      pokeDetail.appendChild(evolutionTitle);
-
-      const current = data[id];
-
-      const pokemonLine = Array()               // Crea un arreglo
-        .concat(current.next_evolution)         // Concatena el arreglo al arreglo next_evolution
-        .concat(current.prev_evolution)         // Concatena el arreglo al arreglo prev_evolution
-        .filter( (element) => element != null ) // Filtra que ninguno de los arreglos sea nulo (undefined)
-        .flatMap( (element) => {                // Mapeamos arreglo único con objetos Pokemon
-          return data.find( (pokemon) => {      // El método find retornará un pokemon desde 'data
-            return pokemon.num === element.num; // El num de pokemon y element deben ser iguales
-          });
-        });
-
-
-      pokemonLine.push(current);                // Agregamos que elegimos pokemon a la lsita de evoluciones
-
-      // Obtenemos una lista de pokemones ordenados por su 'num' de forma 'ascendente'
-      const sortedLine = sortedPokemons(pokemonLine, 'num', 'az');
-
-      // Agregamos los pokemons a la lista
-      addPokemonEvolutionsCards(pokeDetail, sortedLine);
+      showPokemonDetails(pokeDetail, data, data[id]);
     })
 
   }
 }
-// Agregamos los pokemons a la lista
+
+function showPokemonDetails(pokeDetail, pokemons, selectedPokemon) {
+  showSection('pag-details');
+  pokeDetail.innerHTML="";
+
+  pokeDetail.innerHTML+=`
+    <div id="pokedexDetail">
+        <div id="leftDetail">
+            <div id="imgPokemon">
+              <p class="left-style">${selectedPokemon.num}</p>
+              <img src=${selectedPokemon.img} alt=${selectedPokemon.num} class="left-style">
+              <p class="left-style">${selectedPokemon.name}</p>
+              <hr class="left-style">
+            </div>
+            <div>
+              <p class="left-style">Tiempo de aparición: ${selectedPokemon.spawn_time} hrs.</p>
+              <div id="eggIcon">
+                <img src="./Images/egg.png" alt="${selectedPokemon.egg}" class="left-style">
+                  <p class="left-style">${selectedPokemon.egg}</p>
+              </div>
+                <div>
+                  <p>Multiplicadores: ${selectedPokemon.multipliers}</p>
+                </div>
+            </div>
+        </div>
+        <div id="centerDetail">
+          <div id="typeP">
+            <p class="titleStyle">Tipo</p>
+            <p class="centerStyle">${selectedPokemon.type}</p>
+          </div>
+          <div id="weaknessesP">
+            <p class="titleStyle">Debilidades</p>
+            <p>${selectedPokemon.weaknesses}</p>
+          </div>
+        </div>
+        <div id="rightDetail">
+          <div id="heightP">
+            <p class="titleStyle">Altura</p>
+            <p class="rightStyle">${selectedPokemon.height}</p>
+          </div>
+          <div id="ratio">
+            <p class="titleStyle">Ratio de Aparición</p>
+            <p class="rightStyle">${selectedPokemon.spawn_chance}</p>
+          </div>
+          <div id="weightP">
+            <p class="titleStyle">Peso</p>
+            <p class="rightStyle">${selectedPokemon.weight}</p>
+          </div>
+          <div id="candyP">
+            <p class="titleStyle">Caramelos para evolucionar</p>
+            <div id="candyStyle">
+              <img src="./Images/candy.png" alt="${selectedPokemon.candy}">
+              <p>${selectedPokemon.candy_count}</p>
+            </div>
+          </div>
+        </div>
+    </div>`
+
+  const evolutionTitle = document.createElement('h2');
+  evolutionTitle.className = 'evolutionTitle';
+  evolutionTitle.innerHTML = 'Evoluciones';
+  pokeDetail.appendChild(evolutionTitle);
+
+  const current = selectedPokemon;
+
+  const pokemonLine = Array()
+    .concat(current.next_evolution)
+    .concat(current.prev_evolution)
+    .filter( (element) => element != null )
+    .flatMap( (element) => {
+      return pokemons.find( (pokemon) => {
+        return pokemon.num === element.num;
+      });
+    });
+
+  pokemonLine.push(current);
+
+  const sortedLine = sortedPokemons(pokemonLine, 'num', 'az');
+  addPokemonEvolutionsCards(pokeDetail, sortedLine);
+}
+
 function addPokemonEvolutionsCards(details, pokemons) {
     const evolutionLine = Array();
 
     for (const pokemon of pokemons) {
         evolutionLine.push(createCardForPokemon(pokemon));
     }
-
     if ( evolutionLine.length >= 2) {
         for (let index = evolutionLine.length - 1; index > 0; index--) {
             const image = document.createElement("img");
@@ -255,7 +247,6 @@ function addPokemonEvolutionsCards(details, pokemons) {
             evolutionLine.splice(index, 0, image);
         }
     }
-
     const evolutionDiv = document.createElement('div');
     evolutionDiv.className = 'evolution-container';
 
@@ -263,7 +254,6 @@ function addPokemonEvolutionsCards(details, pokemons) {
 
     details.appendChild(evolutionDiv);
 }
-
 
 function rankingPokemon (){
 
@@ -285,9 +275,56 @@ function rankingPokemon (){
         <td class="column3"><img src=${pokemons[i].img} alt=${pokemons[i].num}> ${pokemons[i].name}</td>
         <td class="column4">${pokemons[i].spawn_chance}%</td>
         </tr>`
-
   }
 }
+
+const pokemonSearchText = document.getElementById('search-text-input');
+const pokemonSearchList = document.getElementById('search-list');
+
+pokemonSearchText.addEventListener('change', (event) => {
+  searchPokemonsAndListThem(event);
+});
+
+function searchPokemonsAndListThem(event) {
+  const filteredPokemons = filterPokemons(pokeData.pokemon, 'name', event.target.value);
+
+  addPokemonToList(filteredPokemons, pokemonSearchList);
+}
+
+function addPokemonToList(pokemons, list) {
+  list.innerHTML = '';
+
+  pokemons.forEach(pokemon => {
+    const column = document.createElement('li');
+    column.addEventListener('click', () => { pokemonSelected(pokemon); })
+
+    const image = document.createElement('img');
+    image.src = pokemon.img;
+    image.className = 'search-image'
+
+    const number = document.createElement('p');
+    number.innerText = pokemon.num;
+
+    const name = document.createElement('p');
+    name.innerText = pokemon.name;
+
+    column.appendChild(image);
+    column.appendChild(number);
+    column.appendChild(name);
+
+    list.appendChild(column);
+  });
+}
+
+function pokemonSelected(pokemon) {
+    pokemonSearchList.innerHTML = '';
+    pokemonSearchText.value = '';
+
+    const pokeDetail = document.getElementById("pag-details");
+
+    showPokemonDetails(pokeDetail, pokeData.pokemon, pokemon);
+}
+
 
 setupNavigationListeners();
 setupSelectionsListeners();

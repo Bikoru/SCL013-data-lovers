@@ -215,7 +215,7 @@ En base al análisis anterior creamos un listado con puntos a mejorar:
 - [x] Aumentar el interlineado para facilitar la lectura
 - [x] Agregar un texto explicatorio en la sección ranking para mayor entendimiento del usuario.
 
-Si tuviéramos oportunidades de iteración, nos gustaría implementar:
+Para futuras iteración, nos gustaría implementar:
 
  - Tipos y Debilidades en español
  - Información sobre Pokeparadas
