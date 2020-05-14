@@ -38,7 +38,6 @@ function setupNavigationListeners() {
     });
 }
 
-
 function setupSelectionsListeners() {
     document.getElementById('select-alphabetic').addEventListener('change', (event) => {
         const orderBy = event.target.value;
@@ -128,7 +127,6 @@ function createPokemonCardWithListeners(pokemon) {
 
 function createAllPokemonCards(pokemons) {
     const pokemonList = document.getElementById("pokemon-list");
-   //Se le hace un clear a la lista de pokemones originales para que no se sumen los filtros
     pokemonList.innerHTML = '';
 
     for (const pokemon of pokemons) {
@@ -240,7 +238,6 @@ function addPokemonEvolutionsCards(details, pokemons) {
     for (const pokemon of pokemons) {
         evolutionLine.push(createCardForPokemon(pokemon));
     }
-
     if ( evolutionLine.length >= 2) {
         for (let index = evolutionLine.length - 1; index > 0; index--) {
             const image = document.createElement("img");
@@ -249,7 +246,6 @@ function addPokemonEvolutionsCards(details, pokemons) {
             evolutionLine.splice(index, 0, image);
         }
     }
-
     const evolutionDiv = document.createElement('div');
     evolutionDiv.className = 'evolution-container';
 
@@ -297,7 +293,7 @@ function searchPokemonsAndListThem(event) {
 function addPokemonToList(pokemons, list) {
   list.innerHTML = '';
 
-  pokemons.forEach(pokemon => { 
+  pokemons.forEach(pokemon => {
     const column = document.createElement('li');
     column.addEventListener('click', () => { pokemonSelected(pokemon); })
 

@@ -63,7 +63,7 @@ body{
   #rankingP{
     width: 80%;
   }
-  
+
   .arrow {
     height: 50px;
     width: 50px;
@@ -584,7 +584,7 @@ margin-bottom: 3%;
 
   list-style-type: none;
   background-color: #E5E5E5;
-  max-height: 500px; 
+  max-height: 500px;
   overflow-y: auto;
 }
 
